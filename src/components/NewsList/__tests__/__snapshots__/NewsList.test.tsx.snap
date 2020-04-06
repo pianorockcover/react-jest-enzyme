@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test components Test NewsList component render 1`] = `
+<div>
+  <div
+    className="card"
+    key="0"
+  >
+    <div
+      className="card-body"
+    >
+      <h5
+        className="card-title"
+      >
+        title
+      </h5>
+      <div>
+        body
+      </div>
+    </div>
+  </div>
+</div>
+`;

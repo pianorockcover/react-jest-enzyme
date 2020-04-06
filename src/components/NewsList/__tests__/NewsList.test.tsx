@@ -14,7 +14,7 @@ describe("Test components", () => {
             ]
         }
 
-        const copomnent = shallow(<NewsList { ...props } />);
+        const copomnent = shallow(<NewsList {...props} />);
         expect(copomnent).toMatchSnapshot();
     })
 })
