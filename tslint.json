@@ -1,0 +1,9 @@
+{
+    "defaultSeverity": "warning",
+    "extends": ["tslint:latest", "tslint-react"],
+    "rules": {
+        "interface-name": false,
+        "no-submodule-imports": false,
+        "jsx-no-multiline-js": false
+    }
+}
