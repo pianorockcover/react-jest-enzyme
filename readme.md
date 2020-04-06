@@ -1,5 +1,4 @@
 ## React + Jest + Enzyme
 
-npm test
----
-npm test -- --update-snapshot
+* npm test
+* npm test -- --update-snapshot
