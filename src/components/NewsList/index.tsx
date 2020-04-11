@@ -9,9 +9,13 @@ export interface NewsListProps {
 }
 
 export const NewsList: React.FC<NewsListProps> = ({ news }) => (
-    <div>
+    <div data-news-list>
         {news.map((item, i) => (
-            <div className="card" key={i}>
+            <div
+                className="card"
+                key={i}
+                data-news-card
+            >
                 <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
                     <div>{item.body}</div>

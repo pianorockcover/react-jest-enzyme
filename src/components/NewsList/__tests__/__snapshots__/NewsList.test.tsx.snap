@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test components Test NewsList component render 1`] = `
-<div>
+<div
+  data-news-list={true}
+>
   <div
     className="card"
+    data-news-card={true}
     key="0"
   >
     <div

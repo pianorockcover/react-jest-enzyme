@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import { NewsList } from "./NewsList";
 import { load } from "../services/load";
 
 export const App: React.FC = () => {
     const [news, setNews] = useState<any>();
 
-    useEffect(() => {
+    const onClickBtn = useCallback(() => {
         if (!news) {
             load({
                 onSuccess: (data) => setNews(data)
@@ -14,8 +14,14 @@ export const App: React.FC = () => {
     }, [news])
 
     return (
-        <div className="container pt-10">
-            <button className="btn btn-primary">Load news</button>
+        <div className="container pt-4">
+            <button
+                className="btn btn-primary"
+                data-load-news-button
+                onClick={onClickBtn}
+            >
+                Load news
+            </button>
             {news && <NewsList news={news} />}
         </div>
     )
