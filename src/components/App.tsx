@@ -16,7 +16,7 @@ export const App: React.FC = () => {
     return (
         <div className="container pt-4">
             <button
-                className="btn btn-primary"
+                className="btn btn-success"
                 data-load-news-button
                 onClick={onClickBtn}
             >

@@ -11,9 +11,12 @@
   "author": "nikitos cbr",
   "license": "ISC",
   "dependencies": {
+    "@types/moment": "^2.13.0",
     "@types/react": "^16.9.32",
     "@types/react-dom": "^16.9.6",
     "axios": "^0.19.2",
+    "confluence-api": "^1.4.0",
+    "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

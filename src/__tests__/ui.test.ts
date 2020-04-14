@@ -1,4 +1,5 @@
 import puppeteer from "puppeteer";
+import { publishTestCase } from "../confluence";
 
 const width = 1366;
 const height = 768;
@@ -31,11 +32,23 @@ describe("User Interface Tests", () => {
 
         console.log(`Делаем скриншот страницы с новостями`);
         await page.screenshot({ path: `${screenshotsFolder}/2.jpg` });
-
+       
         console.log("Проверяем, что после клика на кнопку загрузилось больше 0 новостей")
         const newsAmount = await page.$$eval("[data-news-list] [data-news-card]", el => el.length);
         expect(newsAmount).toBeGreaterThan(0);
 
         browser.close();
+
+        // Публикуем тест-кейс в confluence
+        publishTestCase([
+            {
+                desc: "Начальный вид страницы",
+                image: `${screenshotsFolder}/1.jpg`
+            },
+            {
+                desc: "Страница после нажатия кнопки",
+                image: `${screenshotsFolder}/2.jpg`
+            }
+        ]);
     }, 16000);
 })
