@@ -1,0 +1,2 @@
+## Runs tests before push
+npm test
