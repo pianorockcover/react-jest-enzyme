@@ -10,6 +10,8 @@ const config = {
 const confluenceSpace = "TC";
 const confluenceSpaceId = 33086;
 
+const thStyle = "width:300px;background:#f5f5f5;";
+
 export const confluence = new ConfluenceApi(config);
 
 interface TestCase {
@@ -19,7 +21,8 @@ interface TestCase {
 
 export const publishTestCase = (testCases: TestCase[]) => {
     const title = `Test ${moment().format()}`;
-    const content = testCases.map((tc) => `<table><tr><td>${wrapDesc(tc.desc)}</td><td>${wrapImage(tc.image)}</td></tr></table>`).join("");
+    const content = testCases.map((tc) =>
+        `<table><tr><th style="${thStyle}">${wrapDesc(tc.desc)}</th><td>${wrapImage(tc.image)}</td></tr></table>`).join("");
 
     confluence.postContent(confluenceSpace, title, content, confluenceSpaceId,
         (e: any, data: any) =>

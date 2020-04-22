@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+export const apiUrl = "http://localhost:8001/news";
 
 interface LoadOptions {
     onSuccess: (data: any) => void;
